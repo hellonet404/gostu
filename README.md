@@ -11,15 +11,15 @@ ssh-keygen -t rsa -C "xxx"
 ```
 * git提交中文乱码问题
 ```
-* 设置git 的界面编码：
+显示 status 编码
+git config --global core.quotepath false
+
+图形界面编码
 git config --global gui.encoding utf-8
 
-* 设置 commit log 提交时使用 utf-8 编码：
-git config --global i18n.commitencoding utf-8
+提交信息编码
+git config --global i18n.commit.encoding utf-8
 
-* 在 $ git log 时将 utf-8 编码转换成 gbk 编码：
-git config --global i18n.logoutputencoding gbk
-
-* git log 正常显示中文：
-export LESSCHARSET=utf-8
+git log 默认使用 less 分页，所以需要 bash 对 less 命令进行 utf-8 编码
+export LESSCHARSET=utf-8 (windows下为：set LESSCHARSET=utf-8)
 ```
