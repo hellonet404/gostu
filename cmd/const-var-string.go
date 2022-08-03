@@ -6,6 +6,10 @@ import (
 	"runtime"
 )
 
+var msg string
+var err string
+var code int
+
 //常量
 func constFunc() {
 	const a = "abc"         //隐式定义类型
@@ -74,9 +78,10 @@ func varFunc() {
 	var a = 5
 	print(a)
 
-	//声明包级别的全局变量 语法 :=
-	println("声明包级别的全局变量 语法 :=")
+	//初始化声明语法 :=
+	// 注意：但是它只能被用在函数体内，而不可以用于全局变量的声明与赋值。使用操作符 := 可以高效地创建一个新的变量，称之为初始化声明
 	b := 1
+	b = 2
 	println(b)
 	getGoos()
 }
@@ -87,9 +92,19 @@ func valueRefFunc() {
 	var a int = 3
 	//打印内存地址
 	fmt.Println(&a) //0xc0000160a8 16进制表示
+
+	/*
+		程序中所用到的内存在计算机中使用一堆箱子来表示（这也是人们在讲解它的时候的画法），这些箱子被称为“字”
+
+		引用类型:变量r1存储的是r1的值的内存地址，或内存地址中第一个字所在的位置。
+		这个内存地址被称之为 “指针”，指针也是存储在字中，
+		当 r2 = r1，只有引用地址被复制 其中 r1的值改变 ，r2也会收到影响。
+	*/
+	code, err = manyRes()
+	fmt.Printf("code is %v,err is %s\n", code, err)
 }
 
-//
+//字符串
 func stringFunc() {
 
 }
@@ -103,4 +118,10 @@ func getGoos() {
 	fmt.Printf("The operating system is : %s\n", goos)
 	path := os.Getenv("PATH")
 	fmt.Printf("Path is %s\n", path)
+}
+
+func manyRes() (int, string) {
+	var a int = 1
+	var b string = "err message"
+	return a, b
 }
