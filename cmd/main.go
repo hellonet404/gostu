@@ -10,5 +10,9 @@ func main() {
 	//varFunc()
 
 	//值类型引用类型
-	valueRefFunc()
+	//valueRefFunc()
+
+	//typeConversion()
+
+	Unit8FromInt(256)
 }
