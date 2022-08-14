@@ -1,3 +1,6 @@
+/*
+常量 变量 值类型引用类型 字符串
+*/
 package main
 
 import (
