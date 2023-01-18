@@ -1,3 +1,6 @@
+/*
+基本类型与运算符
+*/
 package main
 
 import (
@@ -73,7 +76,7 @@ import (
 
 */
 
-//类型转换
+// 类型转换
 func typeConversion() {
 	var a int16 = 5
 	var b int32
@@ -108,7 +111,7 @@ func IntFromFloat64(x float64) int {
 	panic(fmt.Sprintf("%g is out of the int32 range", x))
 }
 
-//算数运算符
+// 算数运算符
 func numOperator() {
 	i := 1
 	i++
