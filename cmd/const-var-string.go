@@ -13,7 +13,7 @@ var msg string
 var err string
 var code int
 
-//常量
+// 常量
 func constFunc() {
 	const a = "abc"         //隐式定义类型
 	const b string = "abcd" //显式定义类型
@@ -51,7 +51,7 @@ func constFunc() {
 
 }
 
-//变量
+// 变量
 func varFunc() {
 	/*
 		当一个变量被声明之后，系统自动赋予它该类型的零值：
@@ -89,7 +89,7 @@ func varFunc() {
 	getGoos()
 }
 
-//值类型引用类型
+// 值类型引用类型
 func valueRefFunc() {
 
 	var a int = 3
@@ -107,7 +107,7 @@ func valueRefFunc() {
 	fmt.Printf("code is %v,err is %s\n", code, err)
 }
 
-//字符串
+// 字符串
 func stringFunc() {
 
 }
